@@ -1,21 +1,4 @@
 // ------------------ LOGIN CHECK ------------------
-let firebaseToken = null;
-
-(async function checkLogin() {
-  try {
-    firebaseToken = localStorage.getItem("tiang_token");
-
-    // Jika belum login → lempar ke login.html
-    if (!firebaseToken) {
-      window.location.replace("./login.html");
-      return;
-    }
-  } catch (err) {
-    console.warn("Token check dilewati:", err.message);
-    // Jika error, tetap lanjut (tidak memblokir)
-  }
-})();
-
 
 // app.js (module) - Final + Fitur Download KML
 const API_URL = 'https://script.google.com/macros/s/AKfycbzxdAFgQqD3e6Zw1Y7yKNB6bYYLJg0ADOqUgfglWWPq8cena6ZcPq8nJjFCD5uzd_XQwQ/exec';
