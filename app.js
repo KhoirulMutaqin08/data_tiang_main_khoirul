@@ -364,7 +364,6 @@ function generateKmlFromMatches(matches) {
   return header + placemarks + footer;
 }
 
-
 btnDownloadKml.addEventListener('click', () => {
 
   if(!lastMatchedODP.length){
