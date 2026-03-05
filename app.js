@@ -1,7 +1,7 @@
 
 // ------------------ LOGIN CHECK ------------------
 // app.js (module) - Final + Fitur Download KML
-const API_URL = 'https://script.google.com/macros/s/AKfycbzxdAFgQqD3e6Zw1Y7yKNB6bYYLJg0ADOqUgfglWWPq8cena6ZcPq8nJjFCD5uzd_XQwQ/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbzk-DzkizR-iYMFGQITvwOY0fDmGF9C5vcO9-fRh75wxeAOLv1jE_8ZxpvFCt2aF90ksw/exec';
 
 // ----- Helper utilities 
 const $ = (sel, root = document) => root.querySelector(sel);
