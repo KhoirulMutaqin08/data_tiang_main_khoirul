@@ -1,6 +1,5 @@
-// ------------------ LOGIN CHECK ------------------
 // app.js (module) - Final + Fitur Download KML
-const API_URL = 'https://script.google.com/macros/s/AKfycbyF3SWTJOkrUjnfOOqQG8vQCaSR6vep7Sqefmgl1m4qd5uz9frRghKS7L1B02e0-WDP/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwxFiUzgKYlUpCEv7olRlNchyRuE7YQKl8tk6jNunX3dGlV2i7hYTs7PB3JI8H2qOfR/exec';
 
 // ----- Helper utilities 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -252,10 +251,12 @@ async function onSelectNamaJalan(nama){
       return;
     }
 
-    const polyCoords = data.polygon.trim().split(/\s+/).map(s => {
-      const p = s.split(',');
-      return [Number(p[0]), Number(p[1])];
-    });
+    const polyCoords = Array.isArray(data.polygon)
+      ? data.polygon
+      : data.polygon.trim().split(/\s+/).map(s => {
+          const p = s.split(",");
+          return [Number(p[0]), Number(p[1])];
+        });
 
     const coordStrings = polyCoords.map(pt => normalizeCoord(pt[0], pt[1]));
     const uniqueCoords = Array.from(new Set(coordStrings));
