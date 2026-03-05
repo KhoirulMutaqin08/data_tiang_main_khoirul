@@ -347,7 +347,7 @@ function generateKmlFromMatches(matches) {
 
     return `
     <Placemark>
-      <name>TE</name>
+      <name>${nama}</name>
       <description><![CDATA[
         Nama ODP: ${nama}<br/>
         Desa: ${desa}<br/>
